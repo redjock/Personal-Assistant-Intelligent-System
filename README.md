@@ -18,3 +18,5 @@ This code currently fetches weather report from Google page for Pune City. This 
   5.check to do list for day <br>
   6.feed it to text to speech engine <br>
   7.end <br>
+
+I personally find use of it as morning wake up call alarm. It is better that it reads out weather and my todo list first thing in morning.
