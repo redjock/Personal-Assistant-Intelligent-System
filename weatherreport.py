@@ -28,11 +28,12 @@ celcius=browser.find_element_by_id("wob_tm")
 precipitation=browser.find_element_by_id("wob_pp")
 humidity=browser.find_element_by_id("wob_hm")
 wind=browser.find_element_by_id("wob_ws")
+
 engine = pyttsx.init()
 engine.setProperty('rate',95)
 engine.say("This is just a rather very intelligent system")
 engine.say("desinged to assist tanmay sir in his personal work.")
-engine.say("WAKING UP NOW")
+engine.say("Waking up now")
 engine.say("Hello Tanmay Sir. Good Morning.")
 engine.say("Your Location is "+location.text)
 engine.say("Today is"+day.text)
@@ -43,5 +44,12 @@ engine.say("Precipitation predicted is"+precipitation.text)
 engine.say("Humidity recorded is"+humidity.text)
 engine.say("Wind is blowing with"+wind.text)
 engine.say("Weather report completed")
+
+todolists= {"Monday":"something to do monday","tuesday":"sonmething to do tuesday","wednesday":"to do on wednesday","thursday":"to do on thursday","friday":"friday","saturday":"saturday to do" }
+
+for days, todo in todolists.iteritems():
+    if days in day.text:
+        engine.say(todo)
+
 engine.say("Thank you sirr. Have a good and wonderful day ahead!")
-engine.runAndWait()
+engine.runAndWait()	
